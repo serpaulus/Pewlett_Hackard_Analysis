@@ -47,12 +47,15 @@ WHERE (de.to_date  = '9999-01-01')
 	   AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no;
 
+-- Count the number of elogible mentors per role in mentorship_eligibility table 
 
 SELECT COUNT(me.title), me.title
 INTO mentor_role_count
 FROM mentorship_eligibility AS me
 GROUP BY me.title
 ORDER BY me.count DESC;
+
+
 
 
 
