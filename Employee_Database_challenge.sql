@@ -48,6 +48,12 @@ WHERE (de.to_date  = '9999-01-01')
 ORDER BY e.emp_no;
 
 
+SELECT COUNT(me.title), me.title
+INTO mentor_role_count
+FROM mentorship_eligibility AS me
+GROUP BY me.title
+ORDER BY me.count DESC;
+
 
 
 
